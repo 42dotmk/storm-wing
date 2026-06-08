@@ -1,0 +1,4 @@
+dependencies:
+  sparq:
+    git: https://github.com/42dotmk/sparq.git
+    path: PlatformAbstractionLayer/Esp32
