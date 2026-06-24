@@ -1,0 +1,65 @@
+{
+    "version": 4,
+    "configurePresets": [
+        {
+            "name": "base-multi-config",
+            "hidden": true,
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_INTERPROCEDURAL_OPTIMIZATION": "ON",
+                "CMAKE_CXX_STANDARD": "23",
+                "CMAKE_CXX_STANDARD_REQUIRED": "ON",
+                "CMAKE_CXX_EXTENSIONS": "OFF"
+            }
+        },
+        {
+            "name": "gcc-windows",
+            "inherits": "base-multi-config",
+            "displayName": "GCC Ninja Multi-Config (Windows)",
+            "description": "MinGW GCC preset with a MinGW vcpkg triplet",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++",
+                "VCPKG_TARGET_TRIPLET": "x64-mingw-dynamic"
+            }
+        },
+        {
+            "name": "msvc-windows",
+            "inherits": "base-multi-config",
+            "displayName": "MSVC Ninja Multi-Config (Windows)",
+            "description": "MSVC preset with the standard Windows vcpkg triplet",
+            "cacheVariables": {
+                "VCPKG_TARGET_TRIPLET": "x64-windows"
+            }
+        },
+        {
+            "name": "system-default",
+            "inherits": "base-multi-config",
+            "displayName": "System Default Multi-Config",
+            "description": "Uses the operating system's default available compiler"
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "debug",
+            "configurePreset": "gcc-windows",
+            "configuration": "Debug"
+        },
+        {
+            "name": "release",
+            "configurePreset": "gcc-windows",
+            "configuration": "Release"
+        },
+        {
+            "name": "msvc-debug",
+            "configurePreset": "msvc-windows",
+            "configuration": "Debug"
+        },
+        {
+            "name": "msvc-release",
+            "configurePreset": "msvc-windows",
+            "configuration": "Release"
+        }
+    ]
+}
