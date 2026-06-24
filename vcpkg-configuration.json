@@ -1,13 +1,13 @@
 {
     "default-registry": {
         "kind": "git",
-        "repoository": "https://github.com/microsoft/vcpkg",
+        "repository": "https://github.com/microsoft/vcpkg",
         "baseline": "8a21ce99a79bea9d872c7b434fd5e6da37c441ad"
     },
     "registries": [
         {
             "kind": "git",
-            "repoository": "https://github.com/42dotmk/base42-vcpkg-registry",
+            "repository": "https://github.com/42dotmk/base42-vcpkg-registry",
             "packages": [
                 "sparq"
             ],
