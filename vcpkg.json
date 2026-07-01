@@ -1,6 +1,6 @@
 {
     "name": "storm-wing",
-    "version-semver": "0.0.1",
+    "version-semver": "0.0.2",
     "description": "drone app for DIY drones",
     "dependencies": [
         "sparq"
