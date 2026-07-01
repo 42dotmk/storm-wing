@@ -82,7 +82,7 @@ $RECYCLE.BIN/
 .idea/
 
 # CMake build directories
-cmake-build-*/
+*build*/*
 
 # File-based project format
 *.iws
